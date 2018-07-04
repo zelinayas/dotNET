@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="worldModelStoreContainer" CdmEntityContainer="worldEntities">
+    <EntitySetMapping Name="city">
+      <EntityTypeMapping TypeName="worldModel.city">
+        <MappingFragment StoreEntitySet="city">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_City" ColumnName="Name_City" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Population" ColumnName="Population" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="country">
+      <EntityTypeMapping TypeName="worldModel.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Region_ID" ColumnName="Region_ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name_Country" ColumnName="Name_Country" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="Surface_Area" ColumnName="Surface_Area" />
+          <ScalarProperty Name="Indep_Year" ColumnName="Indep_Year" />
+          <ScalarProperty Name="Population" ColumnName="Population" />
+          <ScalarProperty Name="Life_Expectancy" ColumnName="Life_Expectancy" />
+          <ScalarProperty Name="GNP" ColumnName="GNP" />
+          <ScalarProperty Name="GNPOld" ColumnName="GNPOld" />
+          <ScalarProperty Name="Local_Name" ColumnName="Local_Name" />
+          <ScalarProperty Name="Government_Form" ColumnName="Government_Form" />
+          <ScalarProperty Name="Head_Of_State" ColumnName="Head_Of_State" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="Code2" ColumnName="Code2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="worldModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Region" ColumnName="Name_Region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="worldModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

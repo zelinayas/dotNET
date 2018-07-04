@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_OnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SOAL">
+    <Key>
+      <PropertyRef Name="ID_SOAL" />
+    </Key>
+    <Property Name="ID_SOAL" Type="int" Nullable="false" />
+    <Property Name="ID_KELOMPOKSOAL" Type="int" />
+    <Property Name="ID_TIPESOAL" Type="int" />
+    <Property Name="ISI_SOAL" Type="varchar" MaxLength="500" />
+    <Property Name="NILAI_SOAL" Type="int" />
+    <Property Name="Created by" Type="varchar" MaxLength="50" />
+    <Property Name="Created date" Type="datetime" />
+    <Property Name="Modified by" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Test_OnlineModelStoreContainer">
+    <EntitySet Name="SOAL" EntityType="Self.SOAL" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

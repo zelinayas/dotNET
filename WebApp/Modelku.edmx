@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Test_OnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SOAL">
+          <Key>
+            <PropertyRef Name="ID_SOAL" />
+          </Key>
+          <Property Name="ID_SOAL" Type="int" Nullable="false" />
+          <Property Name="ID_KELOMPOKSOAL" Type="int" />
+          <Property Name="ID_TIPESOAL" Type="int" />
+          <Property Name="ISI_SOAL" Type="varchar" MaxLength="500" />
+          <Property Name="NILAI_SOAL" Type="int" />
+          <Property Name="Created by" Type="varchar" MaxLength="50" />
+          <Property Name="Created date" Type="datetime" />
+          <Property Name="Modified by" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Test_OnlineModelStoreContainer">
+          <EntitySet Name="SOAL" EntityType="Self.SOAL" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Test_OnlineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SOAL">
+          <Key>
+            <PropertyRef Name="ID_SOAL" />
+          </Key>
+          <Property Name="ID_SOAL" Type="Int32" Nullable="false" />
+          <Property Name="ID_KELOMPOKSOAL" Type="Int32" />
+          <Property Name="ID_TIPESOAL" Type="Int32" />
+          <Property Name="ISI_SOAL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NILAI_SOAL" Type="Int32" />
+          <Property Name="Created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Created_date" Type="DateTime" Precision="3" />
+          <Property Name="Modified_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Test_OnlineEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SOAL" EntityType="Self.SOAL" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Test_OnlineModelStoreContainer" CdmEntityContainer="Test_OnlineEntities">
+          <EntitySetMapping Name="SOAL">
+            <EntityTypeMapping TypeName="Test_OnlineModel.SOAL">
+              <MappingFragment StoreEntitySet="SOAL">
+                <ScalarProperty Name="ID_SOAL" ColumnName="ID_SOAL" />
+                <ScalarProperty Name="ID_KELOMPOKSOAL" ColumnName="ID_KELOMPOKSOAL" />
+                <ScalarProperty Name="ID_TIPESOAL" ColumnName="ID_TIPESOAL" />
+                <ScalarProperty Name="ISI_SOAL" ColumnName="ISI_SOAL" />
+                <ScalarProperty Name="NILAI_SOAL" ColumnName="NILAI_SOAL" />
+                <ScalarProperty Name="Created_by" ColumnName="Created by" />
+                <ScalarProperty Name="Created_date" ColumnName="Created date" />
+                <ScalarProperty Name="Modified_by" ColumnName="Modified by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
